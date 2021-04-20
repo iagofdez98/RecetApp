@@ -1,2 +1,2 @@
 # ProyectoDM
-Cooking Recipe Gestion App
+Recipe Management App
