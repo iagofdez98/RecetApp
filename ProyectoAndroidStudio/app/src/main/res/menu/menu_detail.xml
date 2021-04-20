@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/listaCompra"
+        android:title="Añadir ingredientes a la lista"
+        android:icon="@drawable/cart"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/compartir"
+        android:title="Compartir"
+        android:icon="@drawable/ic_baseline_share_24"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/editarReceta"
+        android:title="Modificar receta"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/eliminarReceta"
+        android:title="Eliminar receta"
+        app:showAsAction="never" />
+</menu>

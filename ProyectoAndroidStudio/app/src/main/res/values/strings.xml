@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">recetapp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="addRecipe">Añadir Receta</string>
+    <string name="RecipeType">Tipo Receta</string>
+    <string name="numDinner">Num Comensales</string>
+    <string name="Ingredients">Ingredientes</string>
+    <string name="AddIngredient">Añadir Ingrediente</string>
+    <string name="IntroduceIngredient">Introduce el Ingrediente</string>
+    <string name="Directions">Preparación</string>
+    <string name="NumDiner">Num Comensales</string>
+    <string name="HowIsItMade">¿Cómo se prepara?</string>
+    <string name="Galery">Galería</string>
+    <string name="Camera">Cámara</string>
+    <string name="PhotoSource">¿De dónde quieres importar la foto?</string>
+    <string name="InsertPhoto">Insertar Foto</string>
+    <string name="Add">Añadir</string>
+    <string name="ShoppingCart">Carrito de la compra</string>
+    <string name="RecipeName">Nombre Receta</string>
+    <string name="type">Categoria</string>
+    <string name="title">Titulo</string>
+    <string name="Modify">Modificar</string>
+    <string name="Delete">Eliminar</string>
+    <string name="DeleteAreYouSure">¿Seguro que quieres borrar la receta?</string>
+    <string name="DeleteAreYouSureCart">¿Seguro que quieres vaciar el Carrito?</string>
+    <string name="DeleteAreYouSureIngredient">¿Seguro que quieres eliminar el Ingrediente?</string>
+    <string name="DeleteRecipe">BorrarReceta</string>
+    <string name="DeleteIngredient">BorrarIngrediente</string>
+    <string name="DeleteCart">BorrarCarrito</string>
+    <string name="Yes">Sí</string>
+    <string name="No">No</string>
+</resources>

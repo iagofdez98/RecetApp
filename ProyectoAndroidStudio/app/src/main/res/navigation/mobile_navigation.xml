@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.recetapp.ui.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.example.recetapp.ui.CartFragment"
+        android:label="@string/ShoppingCart"
+        tools:layout="@layout/fragment_cart" />
+
+    <fragment
+        android:id="@+id/nav_desserts"
+        android:name="com.example.recetapp.ui.DessertsFragment"
+        android:label="Postres"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_import"
+        android:name="com.example.recetapp.ui.share.ShareFragment"
+        android:label="Importar"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_salads"
+        android:name="com.example.recetapp.ui.SaladsFragment"
+        android:label="Ensaladas"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_meats"
+        android:name="com.example.recetapp.ui.MeatsFragment"
+        android:label="Carnes"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_seafoods"
+        android:name="com.example.recetapp.ui.SeafoodsFragment"
+        android:label="Pescado y marisco"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_pasta"
+        android:name="com.example.recetapp.ui.PastaFragment"
+        android:label="Pastas"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_otros"
+        android:name="com.example.recetapp.ui.OtrosFragment"
+        android:label="Otros"
+        tools:layout="@layout/fragment_home" />
+
+
+
+</navigation>

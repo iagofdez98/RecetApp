@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:id="@+id/AddRecipeFormLayout"
+
+
+        tools:context=".AddRecipeFormActivity">
+
+
+
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:text="@string/addRecipe"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            app:layout_constraintBottom_toTopOf="@+id/RecipeName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+
+
+            ></TextView>
+
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierRecipeType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+
+            app:constraint_referenced_ids="RecipeHint" />
+
+        <TextView
+            android:id="@+id/RecipeNameHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:gravity="center"
+            android:layout_marginStart="10sp"
+            android:text="@string/RecipeName"
+            app:layout_constraintEnd_toStartOf="@+id/barrierRecipeType"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintBottom_toTopOf="@+id/RecipeHint"
+
+
+
+            ></TextView>
+
+        <EditText
+            android:id="@+id/RecipeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/RecipeNameHint"
+            android:layout_marginTop="30sp"
+            android:hint="@string/RecipeName"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrierRecipeType"
+            app:layout_constraintBottom_toTopOf="@+id/RecipeType"
+
+            />
+
+
+        <TextView
+            android:id="@+id/RecipeHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:gravity="center"
+            android:layout_marginStart="10sp"
+            android:text="@string/RecipeType"
+            app:layout_constraintEnd_toStartOf="@+id/barrierRecipeType"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RecipeNameHint"
+            app:layout_constraintBottom_toTopOf="@id/numDinerHint"
+
+
+
+            ></TextView>
+
+        <Spinner
+            android:id="@+id/RecipeType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/RecipeHint"
+            android:layout_marginTop="30sp"
+            app:layout_constraintTop_toBottomOf="@+id/RecipeName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrierRecipeType"
+            app:layout_constraintBottom_toTopOf="@id/numDiner"
+
+            />
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierDinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="numDinerHint" />
+
+
+
+        <TextView
+            android:id="@+id/numDinerHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:text="@string/numDinner"
+            app:layout_constraintEnd_toStartOf="@+id/barrierDinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RecipeHint"
+            android:layout_marginStart="10sp"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/numDiner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:layout_constraintBaseline_toBaselineOf="@+id/numDinerHint"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrierDinner"
+            app:layout_constraintTop_toBottomOf="@+id/RecipeType"
+            android:maxLength="10"
+            android:hint="@string/NumDiner"
+
+            tools:ignore="LabelFor"
+            android:autofillHints="" />
+
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/ingredientsBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="numDiner" />
+
+
+
+        <TextView
+            android:id="@+id/IngredientsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:text="@string/Ingredients"
+            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingredientsBarrier"
+            android:layout_marginStart="10sp"
+            ></TextView>
+
+
+
+
+
+        <TableLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/IngredientContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IngredientsTitle"
+            app:layout_constraintBottom_toTopOf="@+id/IngredientEditTextBarrier"
+            android:fillViewport="true">
+
+
+            <TableRow>
+
+
+            </TableRow>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </TableLayout>
+
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/IngredientEditTextBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="@+id/IngredientContainer"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+
+
+            />
+
+
+        <Button
+            android:id="@+id/AddIngredientBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10sp"
+            android:text="@string/AddIngredient"
+            app:layout_constraintTop_toBottomOf="@+id/IngredientEditTextBarrier"
+
+            ></Button>
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/AddButtonBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            android:layout_marginTop="10sp"
+            app:constraint_referenced_ids="AddIngredientBtn" />
+
+        <TextView
+            android:id="@+id/DirectionsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:text="@string/Directions"
+            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AddButtonBarrier"
+            android:layout_marginStart="10sp"
+            ></TextView>
+
+
+        <EditText
+            android:id="@+id/Directions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/RecipeHint"
+            android:inputType="textMultiLine"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DirectionsTitle"
+            android:hint="@string/HowIsItMade"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:autofillHints="" />
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/PhotoLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Directions"
+
+            >
+
+
+
+            <ImageView
+                android:id="@+id/MealPhoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/base_empty_image"
+
+                >
+
+            </ImageView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Insertar Imagen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/MealPhoto"
+                ></TextView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <Button
+            android:id="@+id/AddRecipeFormButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PhotoLayout"
+            android:text="@string/Add"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            ></Button>
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
